@@ -4,11 +4,9 @@ class Results extends React.Component {
   }
   render() {
     {/* Change code below this line */}
-    if(this.props.fiftyFifty == true){
-    return <h1>You Win!</h1>;}
-    else {
-return <h1>You Lose!</h1>;
-    }
+    return <h1>{
+        this.props.fiftyFifty ? "You win!" : "You lose!"
+      }</h1>;
     {/* Change code above this line */}
   }
 }
@@ -35,7 +33,7 @@ class GameOfChance extends React.Component {
       <div>
         <button onClick={this.handleClick}>Play Again</button>
         {/* Change code below this line */}
-<Results fiftyFifty={expression}/>
+<Results fiftyFifty={expression} />
         {/* Change code above this line */}
         <p>{'Turn: ' + this.state.counter}</p>
       </div>
