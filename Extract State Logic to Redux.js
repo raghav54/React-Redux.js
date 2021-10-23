@@ -12,4 +12,4 @@ switch(action.type){
   default: return state;
 }
 }
-Redux.createStore(messageReducer)
+const store = Redux.createStore(messageReducer)
